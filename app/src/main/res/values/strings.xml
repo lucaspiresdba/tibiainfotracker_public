@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Tibia Info Tracker</string>
+
+    <string name="character_name">Nome do personagem</string>
+    <string name="name">Nome</string>
+    <string name="old_name">Nome Antigo</string>
+    <string name="world">Mundo</string>
+    <string name="old_world">Mundo Antigo</string>
+    <string name="residence">Residência</string>
+    <string name="house">Casa</string>
+    <string name="address">Endereço</string>
+    <string name="city">Cidade</string>
+    <string name="guild">Guild</string>
+    <string name="rank">Rank</string>
+    <string name="deaths">Mortes</string>
+    <string name="character">Personagem</string>
+    <string name="news">Notícias</string>
+    <string name="houses">Casas</string>
+    <string name="highscores">Highscores</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="choose_world">Escolha o Mundo</string>
+    <string name="choose_town">Escolha a Cidade</string>
+    <string name="guild_house">Casas de Guild</string>
+
+    <!-- Custom Views -->
+    <string name="add_two_dots">%1$s:</string>
+
+    <!-- Feedback erros -->
+    <string name="feedback_no_connection">Ops, parece que você não está conectado.</string>
+    <string name="feedback_error">Ops, parece que algo deu errado.</string>
+    <string name="feedback_not_found">Ops, não achamos o que você procurava.</string>
+    <string name="feedback_no_favorites">Você ainda não tem favoritos. \n Que tal adicionar alguns?</string>
+    <string name="try_again">Tentar Novamente</string>
+    <string name="married_to">Casado(a) com</string>
+    <string name="situation">Situação</string>
+    <string name="size">Tamanho</string>
+    <string name="rent">Aluguel</string>
+    <string name="world_two_dots">Mundo:</string>
+    <string name="city_two_dots">Cidade:</string>
+    <string name="city_placeholder">Venore</string>
+    <string name="world_placeholder">Adra</string>
+    <string name="points_skills">Pontos/Habilidades</string>
+    <string name="vocation">Vocação</string>
+    <string name="experience">Experiência</string>
+    <string name="all">Todos</string>
+    <string name="magic">Magia</string>
+    <string name="shield">Escudo</string>
+    <string name="distance">Distância</string>
+    <string name="sword">Espada</string>
+    <string name="axe">Machado</string>
+    <string name="club">Clava</string>
+    <string name="fist">Punhos</string>
+    <string name="fishing">Pescaria</string>
+    <string name="achievements">Conquistas</string>
+    <string name="goshnar">Goshnar</string>
+    <string name="charm">Charme</string>
+    <string name="loyalt">Lealdade</string>
+    <string name="type_two_dots">Tipo:</string>
+    <string name="rp">RP</string>
+    <string name="ek">EK</string>
+    <string name="ed">ED</string>
+    <string name="ms">MS</string>
+    <string name="search">Buscar</string>
+    <string name="level">Level</string>
+    <string name="feedback_button_add_favorite">Adicionar favoritos</string>
+    <string name="about">Sobre</string>
+
+    <!-- Toolbar titles -->
+    <string name="toolbar_title_characters">Personagens</string>
+    <string name="toolbar_title_houses">Casas</string>
+    <string name="toolbar_title_news">Notícias</string>
+    <string name="toolbar_title_highscores">Ranking</string>
+    <string name="toolbar_title_favorite">Favoritos</string>
+    <string name="about_tibia_trademark">Tibia é uma marca registrada da CipSoft GmbH. Tibia e todos os produtos relacionados ao Tibia são propriedade da CipSoft GmbH.</string>
+    <string name="about_all_data">As fontes dos dados e dos icones foram retirados dos sites abaixo:</string>
+    <string name="author">Autor:</string>
+</resources>

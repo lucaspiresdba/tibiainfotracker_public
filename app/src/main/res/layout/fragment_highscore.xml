@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/rounded_edit_text"
+    tools:ignore="RtlSymmetry">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_32"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="loading_lottie.json"
+        app:lottie_loop="true" />
+
+    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaCustomFeedbackError
+        android:id="@+id/feedbackHighscore"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_48"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHighscores"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_48"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layoutAnimation="@anim/layout_animation_fall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/filterContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8"
+        android:background="@drawable/rounded_edit_text"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/filterContainerData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonArrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewLabelWorld"
+                    style="@style/ExtraBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="@string/world_two_dots"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewHighscoreWorldSelector"
+                    style="@style/SemiBoldStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:background="@drawable/rounded_edit_text"
+                    android:paddingTop="@dimen/margin_4"
+                    android:paddingBottom="@dimen/margin_8"
+                    android:text="@string/world_placeholder"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewLabelWorld"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/textViewLabelWorld"
+                    app:layout_constraintTop_toTopOf="@+id/textViewLabelWorld"
+                    tools:text="@string/world_placeholder" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/SemiBoldStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="@string/type_two_dots"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewHighscoreWorldSelector" />
+
+                <com.askjeffreyliu.flexboxradiogroup.FlexBoxRadioGroup
+                    android:id="@+id/radioGroupFilter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:alignContent="space_around"
+                    app:alignItems="center"
+                    app:flexWrap="wrap"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonExp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:checked="true"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/experience" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonMagic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/magic" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonShield"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/shield" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonDist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/distance" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonSword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/sword" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonAxe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/axe" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonClub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/club" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonFist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/fist" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonFishing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/fishing" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonAchi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/achievements" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonGoshnar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/goshnar" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonCharm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/charm" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonLoyalt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/loyalt" />
+                </com.askjeffreyliu.flexboxradiogroup.FlexBoxRadioGroup>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/SemiBoldStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:text="@string/vocation"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroupFilter" />
+
+                <com.askjeffreyliu.flexboxradiogroup.FlexBoxRadioGroup
+                    android:id="@+id/radioGroupVocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:alignContent="space_around"
+                    app:alignItems="center"
+                    app:flexWrap="wrap"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:checked="true"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/all" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonPaladin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/rp" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonKnight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/ek" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonDruid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/ed" />
+
+                    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaRadioButton
+                        android:id="@+id/radioButtonSorcerer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:paddingStart="@dimen/margin_8"
+                        android:text="@string/ms" />
+
+                </com.askjeffreyliu.flexboxradiogroup.FlexBoxRadioGroup>
+
+                <Button
+                    android:id="@+id/buttonSearch"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:drawableLeft="@drawable/ic_search_all"
+                    android:text="@string/search"
+                    android:textAllCaps="false"
+                    android:elevation="3dp"
+                    android:textColor="@color/gray_2D3A40"
+                    android:fontFamily="@font/catamaran"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroupVocation"
+                    tools:ignore="RtlHardcoded" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <ImageButton
+            android:id="@+id/imageButtonArrow"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_32"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

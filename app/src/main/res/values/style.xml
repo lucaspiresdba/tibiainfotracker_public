@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ExtraBoldStyle" parent="TibiaTextViewStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/catamaran_extrabold</item>
+    </style>
+
+    <style name="SemiBoldStyle" parent="TibiaTextViewStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/catamaran_semibold</item>
+    </style>
+
+    <style name="RegularStyle" parent="TibiaTextViewStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/catamaran</item>
+    </style>
+
+    <style name="TibiaTextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/catamaran</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray_2D3A40</item>
+    </style>
+
+    <style name="Theme_Dialog" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="roundedCorners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/margin_8</item>
+    </style>
+
+    <style name="ToolbarColoredBackArrow" parent="Theme.Design.Light.NoActionBar">
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="FullScreenActivity"  parent="Theme.Design.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

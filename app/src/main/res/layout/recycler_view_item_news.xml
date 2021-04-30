@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_8"
+    android:layout_marginStart="@dimen/margin_8"
+    android:layout_marginEnd="@dimen/margin_8"
+    android:background="@drawable/rounded_edit_text"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_8">
+
+    <TextView
+        android:id="@+id/textViewNews"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:fontFamily="@font/catamaran_semibold"
+        android:textColor="@color/gray_2D3A40"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewNews"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tibia elimina necessidade de pagar" />
+
+    <ImageView
+        android:id="@+id/imageViewNews"
+        android:layout_width="@dimen/mid_icon_size"
+        android:layout_height="@dimen/mid_icon_size"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_touch"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewNews"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

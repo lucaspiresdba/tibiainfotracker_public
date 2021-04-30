@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/character"
+        android:id="@+id/navigationCharacter"
+        android:orderInCategory="1"
+        android:icon="@drawable/selector_character"/>
+    <item android:title="@string/houses"
+        android:id="@+id/navigationHouses"
+        android:orderInCategory="2"
+        android:icon="@drawable/selector_houses"/>
+    <item android:title="@string/news"
+        android:id="@+id/navigationNews"
+        android:orderInCategory="3"
+        android:icon="@drawable/selector_news"/>
+    <item android:title="@string/highscores"
+        android:id="@+id/navigationHighscores"
+        android:orderInCategory="4"
+        android:icon="@drawable/selector_highscores"/>
+
+    <item android:title="@string/favoritos"
+        android:id="@+id/navigationFavorites"
+        android:orderInCategory="5"
+        android:icon="@drawable/selector_favorites"/>
+</menu>

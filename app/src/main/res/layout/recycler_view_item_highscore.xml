@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_8"
+    android:layout_marginEnd="@dimen/margin_8"
+    android:layout_marginBottom="@dimen/margin_8"
+    android:background="@drawable/rounded_edit_text"
+    android:padding="@dimen/margin_8">
+
+    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+        android:id="@+id/textViewCharName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:firstText="@string/name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftIcon="@drawable/ic_id" />
+
+    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+        android:id="@+id/textViewCharLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:firstText="@string/level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftIcon="@drawable/ic_level" />
+
+    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+        android:id="@+id/textViewCharRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:firstText="@string/rank"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCharName"
+        app:leftIcon="@drawable/ic_highscore_selected" />
+
+    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+        android:id="@+id/textViewCharWorld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:firstText="@string/world"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCharLevel"
+        app:leftIcon="@drawable/ic_world" />
+
+    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+        android:id="@+id/textViewCharVoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:firstText="@string/vocation"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCharWorld"
+        app:leftIcon="@drawable/ic_contract" />
+
+    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+        android:id="@+id/textViewCharExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:firstText="@string/experience"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCharVoc"
+        app:leftIcon="@drawable/ic_exp_star" />
+
+    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+        android:id="@+id/textViewCharScorePoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:firstText="@string/points_skills"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCharExp"
+        app:leftIcon="@drawable/ic_rank_position" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

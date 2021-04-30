@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/navigationNews">
+
+    <fragment
+        android:id="@+id/navigationCharacter"
+        android:name="br.com.lucaspires.tibiainfotracker.presentation.ui.fragments.CharacterFragment"
+        android:label="navCharacter" >
+        <argument
+            android:name="characterName"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true"
+             />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationNews"
+        android:name="br.com.lucaspires.tibiainfotracker.presentation.ui.fragments.NewsFragment"
+        android:label="navNews" />
+
+    <fragment
+        android:id="@+id/navigationHouses"
+        android:name="br.com.lucaspires.tibiainfotracker.presentation.ui.fragments.HousesFragment"
+        android:label="navHouses" />
+
+    <fragment
+        android:id="@+id/navigationHighscores"
+        android:name="br.com.lucaspires.tibiainfotracker.presentation.ui.fragments.HighscoresFragment"
+        android:label="navHighscores" />
+
+    <fragment
+        android:id="@+id/navigationFavorites"
+        android:name="br.com.lucaspires.tibiainfotracker.presentation.ui.fragments.FavoritesFragment"
+        android:label="navFavorites">
+        <argument
+            android:name="charName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_navigationFavorites_to_navigationCharacter"
+            app:destination="@id/navigationCharacter" />
+    </fragment>
+
+</navigation>

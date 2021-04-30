@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/background">
+
+    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaSearchView
+        android:id="@+id/serchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaCustomFeedbackError
+        android:id="@+id/customFeedBack"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/margin_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/serchView" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/serchView"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="loading_lottie.json"
+        app:lottie_loop="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/characterInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/margin_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/serchView">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@drawable/rounded_corners"
+            android:elevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewFavorite"
+                android:layout_width="@dimen/mid_icon_size"
+                android:layout_height="@dimen/mid_icon_size"
+                android:layout_margin="@dimen/margin_8"
+                app:layout_constraintBottom_toTopOf="@+id/textViewLevelLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaTextView
+                android:id="@+id/textViewLevelLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:fontFamily="@font/catamaran_extrabold"
+                android:gravity="center"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewVocation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewFavorite"
+                tools:text="530" />
+
+            <ImageView
+                android:id="@+id/imageViewVocation"
+                android:layout_width="@dimen/mid_icon_size"
+                android:layout_height="@dimen/mid_icon_size"
+                android:layout_margin="@dimen/margin_8"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewSex"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLevelLabel"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageViewSex"
+                android:layout_width="@dimen/mid_icon_size"
+                android:layout_height="@dimen/mid_icon_size"
+                android:layout_margin="@dimen/margin_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewVocation"
+                tools:ignore="ContentDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/cardCharInfoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:background="@drawable/rounded_corners"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_8"
+                android:visibility="visible">
+
+                <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+                    android:id="@+id/textViewNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:firstText="@string/name"
+                    app:leftIcon="@drawable/ic_id" />
+
+                <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+                    android:id="@+id/textViewOldNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:firstText="@string/old_name"
+                    app:leftIcon="@drawable/ic_old_id" />
+
+                <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+                    android:id="@+id/textViewMarried"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:firstText="@string/married_to"
+                    app:leftIcon="@drawable/ic_married" />
+
+                <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+                    android:id="@+id/textViewWorldLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:firstText="@string/world"
+                    app:leftIcon="@drawable/ic_world" />
+
+                <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+                    android:id="@+id/textViewOldWorldLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:firstText="@string/old_world"
+                    app:leftIcon="@drawable/ic_old_world" />
+
+                <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+                    android:id="@+id/textViewResidenceLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:firstText="@string/residence"
+                    app:leftIcon="@drawable/ic_residence" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardHouseContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:background="@drawable/rounded_corners"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_8"
+                android:visibility="visible">
+
+                <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+                    android:id="@+id/textViewHouseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:firstText="@string/house"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewHouseLabel"
+                    app:leftIcon="@drawable/ic_home_address" />
+
+                <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+                    android:id="@+id/textViewHouseTownLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:firstText="@string/city"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewHouseName"
+                    app:leftIcon="@drawable/ic_city" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardGuildContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:background="@drawable/rounded_corners"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_8"
+                android:visibility="visible">
+
+                <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+                    android:id="@+id/textViewGuildName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:firstText="@string/guild"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:leftIcon="@drawable/ic_guild_id" />
+
+                <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaPairTextView
+                    android:id="@+id/textViewGuildRank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:firstText="@string/rank"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewHouseLabel"
+                    app:leftIcon="@drawable/ic_rank" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardDeathContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8"
+            android:background="@drawable/rounded_corners"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_8"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <br.com.lucaspires.tibiainfotracker.presentation.ui.view.custom.TibiaTextView
+                android:id="@+id/textViewDeathLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:leftIconText="@drawable/ic_skull"
+                app:setTextSize="16sp"
+                app:setTypeface="@font/catamaran_extrabold"
+                app:text="@string/deaths" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewDeaths"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutAnimation="@anim/layout_animation_fall"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

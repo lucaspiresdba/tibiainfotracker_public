@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_2D3A40">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_8"
+        android:background="@drawable/rounded_edit_text"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_8">
+
+        <WebView
+            android:id="@+id/webViewTibia"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewCloseWebView"
+            android:layout_width="@dimen/mid_icon_size"
+            android:layout_height="@dimen/mid_icon_size"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@drawable/ic_close"
+            android:backgroundTint="@android:color/holo_red_dark"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

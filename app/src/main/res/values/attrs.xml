@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TibiaPairTextView">
+        <attr name="firstText" format="string" />
+        <attr name="leftIcon" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="TibiaTextView">
+        <attr name="leftIconText" format="integer" />
+        <attr name="text" format="string" />
+        <attr name="setTypeface" format="integer" />
+        <attr name="setTextSize" format="dimension" />
+        <attr name="setTextColor" format="color"/>
+        <attr name="setIconSize" format="dimension"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_8"
+    android:background="@drawable/rounded_edit_text">
+
+    <EditText
+        android:id="@+id/editTextNameChar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/margin_8"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/catamaran"
+        android:hint="@string/character_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:textColor="@color/gray_2D3A40"
+        android:textColorHint="@color/gray_divider_color"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSearchChar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonSearchChar"
+        android:layout_width="@dimen/mid_icon_size"
+        android:layout_height="@dimen/mid_icon_size"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:background="@drawable/selector_search_button"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNameChar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTextNameChar"
+        app:layout_constraintTop_toTopOf="@+id/editTextNameChar"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
