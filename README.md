@@ -7,6 +7,10 @@ Aceito sujestões(PR's), pontos de melhorias e também tiro dúvidas caso algué
 
 Espero contribuir com a comunidade Android/Desenvolvedores com este repositório.
 
+<b> *** Para compilar o app precisa do <u>google-services.json</u>. 
+Por motivo de segurança, neste repositório não envio do app publicado. *** </b>
+
+**TODO criar passo-a-passo de como configurar firebase database**
 
 <b><h2> Licença </h2></b>
 
