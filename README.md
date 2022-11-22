@@ -1,3 +1,5 @@
+<b><h2>DESCONTINUADO</h2></b>
+
 <b><h2>Tibia Info Tracker</h2></b>
 
 Este projeto foi desenvolvido para aplicar os conhecimentos adquiridos durante minha jornada como Dev Android.
